@@ -1,3 +1,63 @@
 body {
-    background-color: red;
+    
+}
+#playerCount{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 30px 100px 30px;
+}
+.choiceGrid{
+    outline: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+#gameGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    font-size: 100px;
+    line-height: 170px;
+    margin-left: 25%;
+}
+
+#firstGrid{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+#secondGrid{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    
+}
+#thirdGrid{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    
+}
+#fourthGrid{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+#fifthGrid{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+#sixthGrid{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+#seventhGrid{
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+#eighthGrid{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+#ninthGrid{
+    grid-column-start: 3;
+    grid-row-start: 3;
 }
