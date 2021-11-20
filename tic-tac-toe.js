@@ -28,28 +28,37 @@ function playerSymbol(event){
 
 // Comparison event to declare winner. (needs to be fixed to only compare when textContent != "")
 
-// function checkWin(){
-//     let selectID = document.getElementsByClassName("choiceGrid");
-//     if (selectID[0].textContent === selectID[1].textContent && 
-//         selectID[0].textContent === selectID[2].textContent || 
-//         selectID[0].textContent === selectID[3].textContent && 
-//         selectID[0].textContent === selectID[6].textContent ||
-//         selectID[0].textContent === selectID[4].textContent && 
-//         selectID[0].textContent === selectID[8].textContent ||
-//         selectID[2].textContent === selectID[5].textContent && 
-//         selectID[2].textContent === selectID[8].textContent ||
-//         selectID[2].textContent === selectID[4].textContent && 
-//         selectID[0].textContent === selectID[6].textContent ||
-//         selectID[6].textContent === selectID[7].textContent && 
-//         selectID[6].textContent === selectID[8].textContent){
-        
-//             if (playerTurn === "Player1"){
-//                 console.log("Player 1 Wins!!");
-//             } else if (playerTurn === "Player2"){
-//                 console.log("Player 2 Wins!!");
-//             }
-//         } else {
-//             console.log("Is a Draw!")
-//         }
+function checkWinner(){
+    let selectID = document.getElementsByClassName("choiceGrid");
+    if (
+        selectID[0].textContent === "X" && selectID[1].textContent === "X" && selectID[2].textContent === "X" ||
+        selectID[0].textContent === "X" && selectID[3].textContent === "X" && selectID[6].textContent === "X" ||
+        selectID[0].textContent === "X" && selectID[4].textContent === "X" && selectID[8].textContent === "X" ||
+        selectID[2].textContent === "X" && selectID[5].textContent === "X" && selectID[8].textContent === "X" ||
+        selectID[2].textContent === "X" && selectID[4].textContent === "X" && selectID[6].textContent === "X" ||
+        selectID[8].textContent === "X" && selectID[7].textContent === "X" && selectID[6].textContent === "X"
+        ||
+        selectID[1].textContent === "X" && selectID[4].textContent === "X" && selectID[7].textContent === "X"
+        ||
+        selectID[3].textContent === "X" && selectID[4].textContent === "X" && selectID[5].textContent === "X"
+        ){
+        console.log("Player 1 Wins!!");
+
+    } else if (
+        selectID[0].textContent === "O" && selectID[1].textContent === "O" && selectID[2].textContent === "O" ||
+        selectID[0].textContent === "O" && selectID[3].textContent === "O" && selectID[6].textContent === "O" ||
+        selectID[0].textContent === "O" && selectID[4].textContent === "O" && selectID[8].textContent === "O" ||
+        selectID[2].textContent === "O" && selectID[5].textContent === "O" && selectID[8].textContent === "O" ||
+        selectID[2].textContent === "O" && selectID[4].textContent === "O" && selectID[6].textContent === "O" ||
+        selectID[8].textContent === "O" && selectID[7].textContent === "O" && selectID[6].textContent === "O"
+        ||
+        selectID[1].textContent === "O" && selectID[4].textContent === "O" && selectID[7].textContent === "O"
+        ||
+        selectID[3].textContent === "O" && selectID[4].textContent === "O" && selectID[5].textContent === "O"
+        ){
+        console.log("Player 2 Wins!!");
+        } // else {
+        //     console.log("is a Draw");
+        // }
     
-// };
+};
