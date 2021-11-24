@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +13,38 @@
 </head>
 <body>
     <header>
-        <h1>Tic Tac Toe</h1>
-        <h4>The Game</h4>
+        <h1 id="h1">Tic</h1>
+        <h1 id="h2">Tac</h1>
+        <h1 id="h3">Toe</h1>
     </header>
     <main>
         <div id="playerCount">
-            <div>PLAYER 1</div>
+            <div class="player">PLAYER 1<br>- <span class="scoreBoard">00</span> -</div>
             <div class="systemMessage"></div>
-            <div>PLAYER 2</div>
+            <div class="player">PLAYER 2<br>- <span class="scoreBoard">00</span> -</div>
         </div>
-        <div id="gameGrid">
-            <div class="choiceGrid" id="firstGrid"></div>
-            <div class="choiceGrid" id="secondGrid"></div>
-            <div class="choiceGrid" id="thirdGrid"></div>
-            <div class="choiceGrid" id="fourthGrid"></div>
-            <div class="choiceGrid" id="fifthGrid"></div>
-            <div class="choiceGrid" id="sixthGrid"></div>
-            <div class="choiceGrid" id="seventhGrid"></div>
-            <div class="choiceGrid" id="eighthGrid"></div>
-            <div class="choiceGrid" id="ninthGrid"></div>
+        <div id="gameDisplay">
+            <div id="gameGrid">
+                <div class="choiceGrid" id="firstGrid"></div>
+                <div class="choiceGrid" id="secondGrid"></div>
+                <div class="choiceGrid" id="thirdGrid"></div>
+                <div class="choiceGrid" id="fourthGrid"></div>
+                <div class="choiceGrid" id="fifthGrid"></div>
+                <div class="choiceGrid" id="sixthGrid"></div>
+                <div class="choiceGrid" id="seventhGrid"></div>
+                <div class="choiceGrid" id="eighthGrid"></div>
+                <div class="choiceGrid" id="ninthGrid"></div>
         </div>
+    </div>
+    <div id="restart"><button onclick="restartGame()">Play Again</button></div>
+    <div id="nameChange">
+        <h4>Please choose your name:</h4>
+        <input placeholder="Player 1 name">
+        <br>
+        <input placeholder="Player 2 name">
+        <br>
+        <button onclick="">Change</button>
+    </div>
     </main>
     <script src="tic-tac-toe.js"></script>
 </body>
