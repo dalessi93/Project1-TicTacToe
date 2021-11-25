@@ -1,7 +1,7 @@
 body {
     font-family: 'Fredericka the Great', cursive;
     background-image: url(https://storage.needpix.com/rsynced_images/chalkboard-517818_1280.jpg);
-    background-size: 100%;
+    background-size: cover;
     color: white;
 }
 header{
@@ -9,7 +9,7 @@ header{
     justify-content: center;
     align-items: baseline;
     font-size: 30px;
-    height: 150px;
+    height: 140px;
     
 }
 #h1{
@@ -30,7 +30,7 @@ main{
 #score{
     display: flex;
     justify-content: space-between;
-    margin: 0px 65px 25px 65px;
+    margin: 0 65px 0 65px;
     text-align: center;
     font-size: 50px;
 }
@@ -54,7 +54,7 @@ main{
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 0;
 }
 #gameGrid{
     display: grid;
@@ -65,8 +65,6 @@ main{
     text-align: center;
     font-size: 110px;
     line-height: 170px;
-    
-    
 }
 .systemMessage{
     font-size: 40px;
@@ -120,12 +118,12 @@ main{
     
 }
 button{
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Fredericka the Great', cursive;
     border: 2px black solid;
 }
 .bttn2{
-    margin-left: 50px;
+    margin-left: 180px;
 }
 .player{
     font-size: 25px;
@@ -167,3 +165,91 @@ input {
     background-color: red;
     width: 20px;
 }
+
+@media (max-width:1620px){
+header{
+    font-size: 20px;
+    height: 130px;
+}
+#score{
+    margin: 0 90px 0 90px;
+    font-size: 30px;
+}
+#playerCount{
+    margin: 30px 30px 0px 30px;
+}
+.systemMessage{
+    font-size: 30px;
+}
+.player{
+    font-size: 18px;
+}
+span{
+    font-size: 40px;
+}
+.choiceGrid{
+    width: 150px;
+    height: 150px;
+}
+#gameGrid{
+    width: 450px;
+    height: 450px;
+    font-size: 110px;
+    line-height: 170px;
+}
+#namePromptWindow{
+    height: 210px;
+    padding: 0 20px 0 20px;
+    top: 30%; 
+    right: 43%;
+    margin: 0;
+}
+.bttn2{
+    margin-left: 85px;
+}
+}
+@media (max-width:1200px){
+    header{
+        font-size: 15px;
+        height: 80px;
+    }
+    #score{
+        margin: 0 100px 0 100px;
+        font-size: 20px;
+    }
+    #playerCount{
+        margin: 15px 30px 0px 30px;
+    }
+    .systemMessage{
+        font-size: 20px;
+    }
+    .player{
+        font-size: 15px;
+    }
+    span{
+        font-size: 30px;
+    }
+    .choiceGrid{
+        width: 100px;
+        height: 100px;
+    }
+    #gameGrid{
+        width: 300px;
+        height: 300px;
+        font-size: 80px;
+        line-height: 100px;
+    }
+    #namePromptWindow{
+        height: 210px;
+        padding: 0 20px 0 20px;
+        top: 26%; 
+        right: 40%;
+        margin: 0;
+    }
+    button{
+        font-size: 20px;
+    }
+    .bttn2{
+        margin-left: 50px;
+    }
+    }
