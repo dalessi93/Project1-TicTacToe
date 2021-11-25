@@ -23,12 +23,12 @@ function playerSymbol(event){
     if (playerTurn == players[0]){
         event.target.textContent = "X";
         event.target.style.color = "rgba(255, 93, 93, 1)";
-        systemMessage.textContent = players[1] + " , Turn!";
+        systemMessage.textContent = players[1] + ", Turn!";
         return playerTurn = players[1];
     } else if (playerTurn == players[1]){
         event.target.textContent = "O";
         event.target.style.color = "rgba(92, 189, 255, 1)"
-        systemMessage.textContent = players[0] + " , Turn!";
+        systemMessage.textContent = players[0] + ", Turn!";
         return playerTurn = players[0];
     }
 };
@@ -94,4 +94,36 @@ function restartGame(){
     }
     tileChoice.addEventListener("click", playerTileChoice);
     systemMessage.textContent = playerTurn + " Starts!";
+};
+
+function displayNameWindow(){
+    document.getElementById("namePromptWindow").style.display = "block";
+};
+
+function hideNameWindow(){
+    document.getElementById("namePromptWindow").style.display = "none";
+};
+
+function changeName(){
+    //If input is not empty, change name to input value
+    if (document.getElementsByTagName("input")[0].value != ""){
+        players[0] = document.getElementsByTagName("input")[0].value;
+        document.getElementsByClassName("player")[0].textContent = players[0];
+        document.getElementsByTagName("input")[0].value = "";
+    }
+    if (document.getElementsByTagName("input")[1].value != ""){
+        players[1] = document.getElementsByTagName("input")[1].value;
+        document.getElementsByClassName("player")[1].textContent = players[1];
+        document.getElementsByTagName("input")[1].value = "";
+    }
+    // Close changeName UI
+    hideNameWindow();
+    //Change name mid-game without jumping/missing turns.
+    if (playerTurn === "Player 1"){
+        systemMessage.textContent = players[0] + ", Turn!";
+        return playerTurn = players[0];
+    } else if (playerTurn === "Player 2"){
+        systemMessage.textContent = players[1] + ", Turn!";
+        return playerTurn = players[1]
+    }
 };

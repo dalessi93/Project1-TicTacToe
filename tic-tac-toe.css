@@ -15,8 +15,6 @@ header{
 #h1{
     font-family: 'Rock Salt', cursive;
     padding: 5px;
-    
-
 }
 #h2{
     font-family: 'Indie Flower', cursive;
@@ -29,10 +27,17 @@ header{
 main{
     
 }
+#score{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 65px 25px 65px;
+    text-align: center;
+    font-size: 50px;
+}
 #playerCount{
     display: flex;
     justify-content: space-between;
-    margin: 50px 30px 50px 30px;
+    margin: 50px 30px 0px 30px;
     text-align: center;
 }
 #playerCount div{
@@ -48,8 +53,8 @@ main{
 #gameDisplay{
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 #gameGrid{
     display: grid;
@@ -108,30 +113,57 @@ main{
     grid-row-start: 3;
 }
 
-#restart{
+#buttons{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    
 }
 button{
     font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    border: 2px black solid;
+}
+.bttn2{
+    margin-left: 50px;
 }
 .player{
-    font-size: 20px;
+    font-size: 25px;
+    
 }
 span{
-    font-size: 40px;
+    font-size: 60px;
 }
-#nameChange{
-    width: 250px;
-    height: 150px;
+#namePromptWindow{
+    display: none;
+    position: absolute;
+    height: 210px;
+    padding: 0 20px 0 20px;
+    top: 55%; 
+    right: 43%;
+    margin: 0;
+    background-color: white;
+    border-radius: 20%;
+    border: 4px black solid;
+    color: black;
 }
 h4{
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+
 }
 input {
     margin: 3px;
-}
-#nameChange button{
+    padding: 2px;
     font-size: 15px;
+}
+#namePromptWindow button{
+    margin: 20px 0 10px 60px;
+    font-size: 15px;
+}
+#namePromptWindow p{
+    margin-left: 170px;
+    text-align: center;
+    background-color: red;
+    width: 20px;
 }

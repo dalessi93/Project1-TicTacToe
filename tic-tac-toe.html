@@ -19,9 +19,13 @@
     </header>
     <main>
         <div id="playerCount">
-            <div class="player">PLAYER 1<br>- <span class="scoreBoard">00</span> -</div>
+            <div class="player">PLAYER 1</div>
             <div class="systemMessage"></div>
-            <div class="player">PLAYER 2<br>- <span class="scoreBoard">00</span> -</div>
+            <div class="player">PLAYER 2</div>
+        </div>
+        <div id="score">
+            <div>- <span class="scoreBoard">00</span> -</div>
+            <div>- <span class="scoreBoard">00</span> -</div>
         </div>
         <div id="gameDisplay">
             <div id="gameGrid">
@@ -36,14 +40,19 @@
                 <div class="choiceGrid" id="ninthGrid"></div>
         </div>
     </div>
-    <div id="restart"><button onclick="restartGame()">Play Again</button></div>
-    <div id="nameChange">
-        <h4>Please choose your name:</h4>
+    <div id="buttons">
+        <button onclick="displayNameWindow()">Change Name</button>
+        <button class="bttn2" onclick="restartGame()">Play Again</button>
+    </div>
+
+    <div id="namePromptWindow">
+        <p onclick="hideNameWindow()">X</p>
+        <h4>Please choose your name</h4>
         <input placeholder="Player 1 name">
         <br>
         <input placeholder="Player 2 name">
         <br>
-        <button onclick="">Change</button>
+        <button onclick="changeName()">Change</button>
     </div>
     </main>
     <script src="tic-tac-toe.js"></script>
