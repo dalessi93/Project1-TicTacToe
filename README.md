@@ -1,5 +1,7 @@
 # Project1-TicTacToe
 
+[Game Link](https://dalessi93.github.io/Project1-TicTacToe/)
+
 ## Tech Used
     * HTML
     * CSS
