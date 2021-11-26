@@ -69,7 +69,8 @@ main{
 .systemMessage{
     font-size: 40px;
     font-weight: bold;
-    
+    white-space: pre;
+    text-align: center;
 }
 
 #firstGrid{
